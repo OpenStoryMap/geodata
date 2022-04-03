@@ -5,10 +5,18 @@
   "layers": [
     {
       "property": {
-        "id": "AfternoonHigh",
-        "name": "NYC - Afternoon High",
+        "id": "nycHiAfternoon",
+        "name": "NYC Afternoon Heat Index",
         "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/afternoon.tiff"
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-afternoon.tiff"
+      }
+    },
+    {
+      "property": {
+        "id": "njHiAfternoon",
+        "name": "NJ Afternoon High Index",
+        "type": "raster",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-afternoon.tiff"
       }
     },
     {
