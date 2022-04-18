@@ -27,7 +27,7 @@
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heatAndDemographics.geojson",
         "args": {    
           "colorFeatureProperty": "maxHeatIndex",
-          "minColor": "blue",
+          "minColor": "white",
           "maxColor": "red",
           "null": -9999
         } 
