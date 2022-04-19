@@ -56,6 +56,18 @@
             "start": 0,
             "end": 100
           }
+        },
+        {
+          "id": "medianHouseholdIncome",
+          "title": "Median Household Income",
+          "type": "slider-range",
+          "args": {
+            "min": 0,
+            "max": 300000,
+            "step": 1000,
+            "start": 0,
+            "end": 300000
+          }
         }
       ]
     },
