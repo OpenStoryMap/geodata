@@ -70,6 +70,18 @@
           "fillColor": "red"
         }
       }
+    },
+    {
+      "property": {
+        "id": "greenspace",
+        "name": "Greenspaces",
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedGreenspace.geojson",
+        "args": {
+          "color": "green",
+          "fillColor": "green"
+        }
+      }
     }
   ],
   "stories": [
