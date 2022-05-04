@@ -26,7 +26,7 @@
         "type": "layer-with-filters",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heatAndDemographics.geojson",
         "args": {
-          "colorFeatureProperty": "maxHeatIndex",    
+          "colorFeatureProperty": "afternoonMaxHeatIndex",    
           "minColor": "white",
           "maxColor": "red",
           "null": -9999 
@@ -46,7 +46,7 @@
             }
         },
         {
-          "id": "maxHeatIndex",
+          "id": "afternoonMaxHeatIndex",
           "title": "Max Heat Index",
           "type": "slider-range",
           "args": {
