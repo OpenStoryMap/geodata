@@ -1,8 +1,27 @@
 {
   "mapboxAccessToken": "",
-  "latLng": [40.762967, -74.0131407],
-  "zoom": 12,
+  "initialMapState": {
+    "lat": 40.689656366699694,
+    "lng": -74.04497587916974,
+    "zoom": 13
+  },
   "layers": [
+    {
+      "property": {
+        "id": "nycHiMorning",
+        "name": "NYC Morning Heat Index",
+        "type": "raster",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-morning.tiff"
+      }
+    },
+    {
+      "property": {
+        "id": "njHiMorning",
+        "name": "NJ Morning High Index",
+        "type": "raster",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-morning.tiff"
+      }
+    },
     {
       "property": {
         "id": "nycHiAfternoon",
@@ -21,6 +40,22 @@
     },
     {
       "property": {
+        "id": "nycHiEvening",
+        "name": "NYC Evening Heat Index",
+        "type": "raster",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-evening.tiff"
+      }
+    },
+    {
+      "property": {
+        "id": "njHiEvening",
+        "name": "NJ Evening High Index",
+        "type": "raster",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-evening.tiff"
+      }
+    },
+    {
+      "property": {
         "id": "heatAndDemographics",
         "name": "Heat and Demographics",
         "type": "layer-with-filters",
@@ -29,7 +64,8 @@
           "colorFeatureProperty": "afternoonMaxHeatIndex",    
           "minColor": "white",
           "maxColor": "red",
-          "null": -9999 
+          "null": -9999,
+          "fillColor": "black"
         }
       },
       "controlProperties": [
@@ -46,18 +82,6 @@
             }
         },
         {
-          "id": "afternoonMaxHeatIndex",
-          "title": "Max Heat Index",
-          "type": "slider-range",
-          "args": {
-            "min": 80,
-            "max": 90,
-            "step": 1,
-            "start": 80,
-            "end": 90
-          }
-        },
-        {
           "id": "medianHouseholdIncome",
           "title": "Median Household Income",
           "type": "slider-range",
@@ -67,6 +91,42 @@
             "step": 1000,
             "start": 0,
             "end": 300000
+          }
+        },
+        {
+          "id": "morningMaxHeatIndex",
+          "title": "Morning Max Heat Index",
+          "type": "slider-range",
+          "args": {
+            "min": 60,
+            "max": 100,
+            "step": 1,
+            "start": 60,
+            "end": 100
+          }
+        },
+        {
+          "id": "afternoonMaxHeatIndex",
+          "title": "Afternoon Max Heat Index",
+          "type": "slider-range",
+          "args": {
+            "min": 60,
+            "max": 100,
+            "step": 1,
+            "start": 60,
+            "end": 100
+          }
+        },
+        {
+          "id": "eveningMaxHeatIndex",
+          "title": "Evening Max Heat Index",
+          "type": "slider-range",
+          "args": {
+            "min": 60,
+            "max": 100,
+            "step": 1,
+            "start": 60,
+            "end": 100
           }
         }
       ]
@@ -85,16 +145,16 @@
       },
       "controlProperties": [
         {
-            "id": "grade",
-            "title": "Grade",
-            "type": "slider-range",
-            "args": {
-              "min": 1,
-              "max": 4,
-              "step": 1,
-              "start": 1,
-              "end": 4
-            }
+          "id": "grade",
+          "title": "Grade",
+          "type": "slider-range",
+          "args": {
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "start": 1,
+            "end": 4
+          }
         }
       ]
     },
@@ -118,7 +178,11 @@
       "mapState": {
         "lat": 40.805985,
         "lng": -73.925476,
-        "zoom": 15
+        "zoom": 16,
+        "layers": ["redline", "nycHiEvening", "njHiEvening"],
+        "controlValues": {
+          "redline.grade": [1,1]
+        }
       }
     },
     {
