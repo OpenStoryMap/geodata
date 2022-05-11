@@ -180,9 +180,18 @@
         "lng": -73.925476,
         "zoom": 16,
         "layers": ["redline", "nycHiEvening", "njHiEvening"],
-        "controlValues": {
-          "redline.grade": [1,1]
-        }
+        "controlPropertyValues": [
+          {
+            "layerId": "redline",
+            "opacity": 0.5,
+            "controlProperties": [
+              {
+                "controlPropertyId": "grade",
+                "value": [1, 1]
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -191,7 +200,8 @@
       "mapState": {
         "lat": 40.844771,
         "lng": -73.937088,
-        "zoom": 15
+        "zoom": 15,
+        "layers": ["heatAndDemographics"]
       }
     }
   ]
