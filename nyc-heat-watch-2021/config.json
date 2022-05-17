@@ -134,7 +134,7 @@
     {
       "property": {
         "id": "redline",
-        "name": "Redlinned Areas",
+        "name": "Redlined Areas",
         "type": "layer-with-filters",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedRedline.geojson",
         "args": {
