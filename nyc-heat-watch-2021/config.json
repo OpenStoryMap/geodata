@@ -17,7 +17,7 @@
     {
       "property": {
         "id": "njHiMorning",
-        "name": "NJ Morning High Index",
+        "name": "NJ Morning Heat Index",
         "type": "raster",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-morning.tiff"
       }
@@ -33,7 +33,7 @@
     {
       "property": {
         "id": "njHiAfternoon",
-        "name": "NJ Afternoon High Index",
+        "name": "NJ Afternoon Heat Index",
         "type": "raster",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-afternoon.tiff"
       }
@@ -49,7 +49,7 @@
     {
       "property": {
         "id": "njHiEvening",
-        "name": "NJ Evening High Index",
+        "name": "NJ Evening Heat Index",
         "type": "raster",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-evening.tiff"
       }
@@ -196,22 +196,31 @@
     },
     {
       "property": {
-        "id": "heat-prostration",
+        "id": "heatProstration",
         "name": "Heat Prostration",
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heat-prostration.geojson",
         "displayProperties": [
+          {"id": "Casualty", "displayName": "Name:"},
           {"id": "Year_", "displayName": "Year:"},
           {"id": "Death", "displayName": "Death:"},
           {"id": "Age", "displayName": "Age:"}
         ]
+      }
+    },
+    {
+      "property": {
+        "id": "njtransitOneBusRoute",
+        "name": "NJ Transit #1 bus route",
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/njtransit-one-bus.geojson"
       }
     }
   ],
   "stories": [
     {
       "title": "Dr. Melissa Barber",
-      "content": "I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood",
+      "content": "I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road1.jpeg\"></div>",
       "mapState": {
         "lat": 40.805985,
         "lng": -73.925476,
@@ -238,7 +247,27 @@
         "lat": 40.844771,
         "lng": -73.937088,
         "zoom": 15,
-        "layers": ["heatAndDemographics"]
+        "layers": ["nycHiAfternoon", "njHiAfternoon"]
+      }
+    },
+    {
+      "title": "The #1 Bus Chronicles",
+      "content": "Joel Katz writes, as a the director of the documentary film <a href=\"https://www.twn.org/catalog/pages/responsive/cpage.aspx?rec=1536&card=price\" target=\"_blank\">The #1 Bus Chronicles</a>, I spent countless hours at a bus stop at the intersection of Hackensack Ave. and Routes 1&9 in South Kearny, NJ. Weather conditions ranged from mid-blizzard to scorching heat. There's a bus shelter on only one side of the highway, and no water fountain anywhere nearby. During extreme heat it was absolutely withering",
+      "mapState": {
+        "lat": 40.728743,
+        "lng": -74.103840,
+        "zoom": 13,
+        "layers": ["njtransitOneBusRoute", "nycHiMorning", "njHiMorning"]
+      }
+    },
+    {
+      "title": "Harlem and Heat",
+      "content": "Kemuning A. Adiputri's <a href=\"https://storymaps.arcgis.com/stories/4bda4f7fd7954640853f7ab76ef95403\" target=\"_blank\">story map</a> on heat prostration",
+      "mapState": {
+        "lat": 40.813573, 
+        "lng": -73.933917,
+        "zoom": 13,
+        "layers": ["heatProstration", "nycHiEvening", "njHiEvening"]
       }
     }
   ]
