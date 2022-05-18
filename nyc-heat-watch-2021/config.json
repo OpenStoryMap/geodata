@@ -1,9 +1,9 @@
 {
   "mapboxAccessToken": "",
   "initialMapState": {
-    "lat": 40.689656366699694,
-    "lng": -74.04497587916974,
-    "zoom": 13
+    "lat": 40.763862,
+    "lng": -74.011893,
+    "zoom": 12
   },
   "layers": [
     {
@@ -66,13 +66,23 @@
           "maxColor": "red",
           "null": -9999,
           "fillColor": "black"
-        }
+        },
+        "displayProperties": [
+          {"id": "TRACTCE", "displayName": "Census Tract:"},
+          {"id": "blackPercentage", "type": "percentage", "displayName": "Black Population:"},
+          {"id": "medianHouseholdIncome", "type": "currency", "displayName": "Median Household Income:"},
+          {"id": "morningMaxHeatIndex", "displayName": "Morning Max Heat Index:"},
+          {"id": "afternoonMaxHeatIndex", "displayName": "Afternoon Max Heat Index:"},
+          {"id": "eveningMaxHeatIndex", "displayName": "Evening Max Heat Index:"}
+        ]
       },
       "controlProperties": [
         {
             "id": "nonWhitePercentage",
             "title": "Non White (%)",
             "type": "slider-range",
+            "tooltip": "The percentage of people who don't consider themselves white only",
+            "valueDisplayType": "percentage",
             "args": {
               "min": 0,
               "max": 1,
@@ -85,6 +95,7 @@
           "id": "medianHouseholdIncome",
           "title": "Median Household Income",
           "type": "slider-range",
+          "valueDisplayType": "currency",
           "args": {
             "min": 0,
             "max": 300000,
@@ -96,6 +107,7 @@
         {
           "id": "morningMaxHeatIndex",
           "title": "Morning Max Heat Index",
+          "tooltip": "The maximum heat index recorded during the morning of the campaign in a given census block",
           "type": "slider-range",
           "args": {
             "min": 60,
@@ -108,6 +120,7 @@
         {
           "id": "afternoonMaxHeatIndex",
           "title": "Afternoon Max Heat Index",
+          "tooltip": "The maximum heat index recorded during the afternoon of the campaign in a given census block",
           "type": "slider-range",
           "args": {
             "min": 60,
@@ -120,6 +133,7 @@
         {
           "id": "eveningMaxHeatIndex",
           "title": "Evening Max Heat Index",
+          "tooltip": "The maximum heat index recorded during the evening of the campaign in a given census block",
           "type": "slider-range",
           "args": {
             "min": 60,
@@ -141,13 +155,17 @@
           "colorFeatureProperty": "grade",    
           "minColor": "darkred",
           "maxColor": "indianred"
-        }
+        },
+        "displayProperties": [
+          {"id": "holc_grade", "displayName": "Redline Grade:"}
+        ]
       },
       "controlProperties": [
         {
           "id": "grade",
           "title": "Grade",
           "type": "slider-range",
+          "tooltip": "The redline grade from worst D (represented as 1) to best A (represented as 4)",
           "args": {
             "min": 1,
             "max": 4,
@@ -161,13 +179,32 @@
     {
       "property": {
         "id": "greenspace",
-        "name": "Greenspaces",
+        "name": "Greenspace",
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedGreenspace.geojson",
         "args": {
           "color": "green",
           "fillColor": "green"
-        }
+        },
+        "displayProperties": [
+          {"id": "park_name", "displayName": "Park Name:"},
+          {"id": "name", "displayName": "Park Name:"},
+          {"id": "NAME", "displayName": "Park Name:"},
+          {"id": "park", "displayName": "Park Name:"}
+        ]
+      }
+    },
+    {
+      "property": {
+        "id": "heat-prostration",
+        "name": "Heat Prostration",
+        "type": "geojson",
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heat-prostration.geojson",
+        "displayProperties": [
+          {"id": "Year_", "displayName": "Year:"},
+          {"id": "Death", "displayName": "Death:"},
+          {"id": "Age", "displayName": "Age:"}
+        ]
       }
     }
   ],
