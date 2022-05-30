@@ -2,8 +2,9 @@
   "mapboxAccessToken": "",
   "initialMapState": {
     "lat": 40.763862,
-    "lng": -74.011893,
-    "zoom": 12
+    "lng": -73.95,
+    "zoom": 12,
+    "layers": ["nycHiAfternoon", "njHiAfternoon"]
   },
   "layers": [
     {
