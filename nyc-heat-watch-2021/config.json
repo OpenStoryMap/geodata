@@ -270,6 +270,16 @@
         "zoom": 13,
         "layers": ["heatProstration", "nycHiEvening", "njHiEvening"]
       }
+    },
+    {
+      "title": "Life without shade trees",
+      "content": "Shade trees are typically overlooked for their ability to cool urban areas. Shade trees are mature street trees that are able to shade surfaces underneath as well as cool the air around them. When urban areas exist without trees, people must get creative to escape extreme heat. Here skateboarders use the shade of the NJ Turnpike Extension to shade themselves.<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/1.jpg\"></div>Here a man sites in the shade of a building <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/2_v2.jpg\"></div>Businesses on the side of the street with no shade get less foot traffic <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/3.jpg\"></div>",
+      "mapState": {
+        "lat": 40.731967, 
+        "lng": -74.046526,
+        "zoom": 14,
+        "layers": ["nycHiAfternoon", "njHiAfternoon"]
+      }
     }
   ]
 }
