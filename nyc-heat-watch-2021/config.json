@@ -4,23 +4,15 @@
     "lat": 40.763862,
     "lng": -73.95,
     "zoom": 12,
-    "layers": ["nycHiAfternoon", "njHiAfternoon"]
+    "layers": ["njNycHiMorning"]
   },
   "layers": [
     {
       "property": {
-        "id": "nycHiMorning",
-        "name": "NYC Morning Heat Index",
+        "id": "njNycHiMorning",
+        "name": "NJ / NYC Morning Heat Index",
         "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-morning.tiff"
-      }
-    },
-    {
-      "property": {
-        "id": "njHiMorning",
-        "name": "NJ Morning Heat Index",
-        "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-morning.tiff"
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/demo-20220601/nyc-heat-watch-2021/nj-nyc-hi-morning-percent-cleaned.tif"
       }
     },
     {
@@ -68,14 +60,16 @@
           "null": -9999,
           "fillColor": "black"
         },
-        "displayProperties": [
-          {"id": "TRACTCE", "displayName": "Census Tract:"},
-          {"id": "blackPercentage", "type": "percentage", "displayName": "Black Population:"},
-          {"id": "medianHouseholdIncome", "type": "currency", "displayName": "Median Household Income:"},
-          {"id": "morningMaxHeatIndex", "displayName": "Morning Max Heat Index:"},
-          {"id": "afternoonMaxHeatIndex", "displayName": "Afternoon Max Heat Index:"},
-          {"id": "eveningMaxHeatIndex", "displayName": "Evening Max Heat Index:"}
-        ]
+        "displayProperties": {
+            "displayPropertyArgs": [
+                {"id": "TRACTCE", "displayName": "Census Tract:"},
+                {"id": "blackPercentage", "type": "percentage", "displayName": "Black Population:"},
+                {"id": "medianHouseholdIncome", "type": "currency", "displayName": "Median Household Income:"},
+                {"id": "morningMaxHeatIndex", "displayName": "Morning Max Heat Index:"},
+                {"id": "afternoonMaxHeatIndex", "displayName": "Afternoon Max Heat Index:"},
+                {"id": "eveningMaxHeatIndex", "displayName": "Evening Max Heat Index:"}
+            ]
+        }
       },
       "controlProperties": [
         {
@@ -84,6 +78,7 @@
             "type": "slider-range",
             "tooltip": "The percentage of people who don't consider themselves white only",
             "valueDisplayType": "percentage",
+            "hideNull": true,
             "args": {
               "min": 0,
               "max": 1,
@@ -97,6 +92,7 @@
           "title": "Median Household Income",
           "type": "slider-range",
           "valueDisplayType": "currency",
+          "hideNull": true,
           "args": {
             "min": 0,
             "max": 300000,
@@ -157,9 +153,9 @@
           "minColor": "darkred",
           "maxColor": "indianred"
         },
-        "displayProperties": [
-          {"id": "holc_grade", "displayName": "Redline Grade:"}
-        ]
+        "displayProperties": {
+            "displayPropertyArgs": [ {"id": "holc_grade", "displayName": "Redline Grade:"} ]
+        }
       },
       "controlProperties": [
         {
@@ -187,12 +183,15 @@
           "color": "green",
           "fillColor": "green"
         },
-        "displayProperties": [
-          {"id": "park_name", "displayName": "Park Name:"},
-          {"id": "name", "displayName": "Park Name:"},
-          {"id": "NAME", "displayName": "Park Name:"},
-          {"id": "park", "displayName": "Park Name:"}
-        ]
+        "displayProperties": {
+            "missingDisplay": "No name found",
+            "displayPropertyArgs": [
+                {"id": "park_name", "displayName": "Park Name:"},
+                {"id": "name", "displayName": "Park Name:"},
+                {"id": "NAME", "displayName": "Park Name:"},
+                {"id": "park", "displayName": "Park Name:"}
+            ]
+        }
       }
     },
     {
@@ -201,12 +200,15 @@
         "name": "Heat Prostration",
         "type": "geojson",
         "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heat-prostration.geojson",
-        "displayProperties": [
-          {"id": "Casualty", "displayName": "Name:"},
-          {"id": "Year_", "displayName": "Year:"},
-          {"id": "Death", "displayName": "Death:"},
-          {"id": "Age", "displayName": "Age:"}
-        ]
+        "ignoreOpacity": true,
+        "displayProperties": {
+            "displayPropertyArgs": [
+                {"id": "Casualty", "displayName": "Name:"},
+                {"id": "Year_", "displayName": "Year:"},
+                {"id": "Death", "displayName": "Death:"},
+                {"id": "Age", "displayName": "Age:"}
+            ]
+        }
       }
     },
     {
