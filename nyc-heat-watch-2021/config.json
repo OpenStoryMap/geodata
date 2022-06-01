@@ -216,7 +216,8 @@
         "id": "njtransitOneBusRoute",
         "name": "NJ Transit #1 bus route",
         "type": "geojson",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/njtransit-one-bus.geojson"
+        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/njtransit-one-bus.geojson",
+        "ignoreOpacity": true
       }
     }
   ],
@@ -260,7 +261,7 @@
         "lat": 40.728743,
         "lng": -74.103840,
         "zoom": 13,
-        "layers": ["njtransitOneBusRoute", "nycHiMorning", "njHiMorning"]
+        "layers": ["njtransitOneBusRoute", "njNycHiMorning"]
       }
     },
     {
