@@ -1,288 +1,383 @@
 {
-  "mapboxAccessToken": "",
-  "initialMapState": {
-    "lat": 40.763862,
-    "lng": -73.95,
-    "zoom": 12,
-    "layers": ["njNycHiMorning"]
+  "mapboxAccessToken":"",
+  "initialMapState":{
+     "lat":40.763862,
+     "lng":-73.95,
+     "zoom":12,
+     "layers":[
+        "njNycHiMorning"
+     ]
   },
-  "layers": [
-    {
-      "property": {
-        "id": "njNycHiMorning",
-        "name": "NJ / NYC Morning Heat Index",
-        "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-nyc-hi-morning-percent-cleaned-compressed.tif"
-      }
-    },
-    {
-      "property": {
-        "id": "nycHiAfternoon",
-        "name": "NYC Afternoon Heat Index",
-        "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-afternoon.tiff"
-      }
-    },
-    {
-      "property": {
-        "id": "njHiAfternoon",
-        "name": "NJ Afternoon Heat Index",
-        "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-afternoon.tiff"
-      }
-    },
-    {
-      "property": {
-        "id": "nycHiEvening",
-        "name": "NYC Evening Heat Index",
-        "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-evening.tiff"
-      }
-    },
-    {
-      "property": {
-        "id": "njHiEvening",
-        "name": "NJ Evening Heat Index",
-        "type": "raster",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-evening.tiff"
-      }
-    },
-    {
-      "property": {
-        "id": "heatAndDemographics",
-        "name": "Heat and Demographics",
-        "type": "layer-with-filters",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heatAndDemographics.geojson",
-        "args": {
-          "colorFeatureProperty": "afternoonMaxHeatIndex",    
-          "minColor": "white",
-          "maxColor": "red",
-          "null": -9999,
-          "fillColor": "black"
-        },
-        "displayProperties": {
-            "displayPropertyArgs": [
-                {"id": "TRACTCE", "displayName": "Census Tract:"},
-                {"id": "blackPercentage", "type": "percentage", "displayName": "Black Population:"},
-                {"id": "medianHouseholdIncome", "type": "currency", "displayName": "Median Household Income:"},
-                {"id": "morningMaxHeatIndex", "displayName": "Morning Max Heat Index:"},
-                {"id": "afternoonMaxHeatIndex", "displayName": "Afternoon Max Heat Index:"},
-                {"id": "eveningMaxHeatIndex", "displayName": "Evening Max Heat Index:"}
-            ]
+  "layers":[
+     {
+        "property":{
+           "id":"njNycHiMorning",
+           "name":"NJ / NYC Morning Heat Index",
+           "type":"raster",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-nyc-hi-morning-percent-cleaned-compressed.tif"
         }
-      },
-      "controlProperties": [
-        {
-            "id": "nonWhitePercentage",
-            "title": "Non White (%)",
-            "type": "slider-range",
-            "tooltip": "The percentage of people who don't consider themselves white only",
-            "valueDisplayType": "percentage",
-            "hideNull": true,
-            "args": {
-              "min": 0,
-              "max": 1,
-              "step": 0.01,
-              "start": 0,
-              "end": 1
-            }
-        },
-        {
-          "id": "medianHouseholdIncome",
-          "title": "Median Household Income",
-          "type": "slider-range",
-          "valueDisplayType": "currency",
-          "hideNull": true,
-          "args": {
-            "min": 0,
-            "max": 300000,
-            "step": 1000,
-            "start": 0,
-            "end": 300000
-          }
-        },
-        {
-          "id": "morningMaxHeatIndex",
-          "title": "Morning Max Heat Index",
-          "tooltip": "The maximum heat index recorded during the morning of the campaign in a given census block",
-          "type": "slider-range",
-          "args": {
-            "min": 60,
-            "max": 100,
-            "step": 1,
-            "start": 60,
-            "end": 100
-          }
-        },
-        {
-          "id": "afternoonMaxHeatIndex",
-          "title": "Afternoon Max Heat Index",
-          "tooltip": "The maximum heat index recorded during the afternoon of the campaign in a given census block",
-          "type": "slider-range",
-          "args": {
-            "min": 60,
-            "max": 100,
-            "step": 1,
-            "start": 60,
-            "end": 100
-          }
-        },
-        {
-          "id": "eveningMaxHeatIndex",
-          "title": "Evening Max Heat Index",
-          "tooltip": "The maximum heat index recorded during the evening of the campaign in a given census block",
-          "type": "slider-range",
-          "args": {
-            "min": 60,
-            "max": 100,
-            "step": 1,
-            "start": 60,
-            "end": 100
-          }
+     },
+     {
+        "property":{
+           "id":"nycHiAfternoon",
+           "name":"NYC Afternoon Heat Index",
+           "type":"raster",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-afternoon.tiff"
         }
-      ]
-    },
-    {
-      "property": {
-        "id": "redline",
-        "name": "Redlined Areas",
-        "type": "layer-with-filters",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedRedline.geojson",
-        "args": {
-          "colorFeatureProperty": "grade",    
-          "minColor": "darkred",
-          "maxColor": "indianred"
+     },
+     {
+        "property":{
+           "id":"njHiAfternoon",
+           "name":"NJ Afternoon Heat Index",
+           "type":"raster",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-afternoon.tiff"
+        }
+     },
+     {
+        "property":{
+           "id":"nycHiEvening",
+           "name":"NYC Evening Heat Index",
+           "type":"raster",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-evening.tiff"
+        }
+     },
+     {
+        "property":{
+           "id":"njHiEvening",
+           "name":"NJ Evening Heat Index",
+           "type":"raster",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-evening.tiff"
+        }
+     },
+     {
+        "property":{
+           "id":"heatAndDemographics",
+           "name":"Heat and Demographics",
+           "type":"layer-with-filters",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heatAndDemographics.geojson",
+           "args":{
+              "colorFeatureProperty":"afternoonMaxHeatIndex",
+              "minColor":"white",
+              "maxColor":"red",
+              "null":-9999,
+              "fillColor":"black"
+           },
+           "displayProperties":{
+              "displayPropertyArgs":[
+                 {
+                    "id":"TRACTCE",
+                    "displayName":"Census Tract:"
+                 },
+                 {
+                    "id":"blackPercentage",
+                    "type":"percentage",
+                    "displayName":"Black Population:"
+                 },
+                 {
+                    "id":"medianHouseholdIncome",
+                    "type":"currency",
+                    "displayName":"Median Household Income:"
+                 },
+                 {
+                    "id":"morningMaxHeatIndex",
+                    "displayName":"Morning Max Heat Index:"
+                 },
+                 {
+                    "id":"afternoonMaxHeatIndex",
+                    "displayName":"Afternoon Max Heat Index:"
+                 },
+                 {
+                    "id":"eveningMaxHeatIndex",
+                    "displayName":"Evening Max Heat Index:"
+                 }
+              ]
+           }
         },
-        "displayProperties": {
-            "displayPropertyArgs": [ {"id": "holc_grade", "displayName": "Redline Grade:"} ]
-        }
-      },
-      "controlProperties": [
-        {
-          "id": "grade",
-          "title": "Grade",
-          "type": "slider-range",
-          "tooltip": "The redline grade from worst D (represented as 1) to best A (represented as 4)",
-          "args": {
-            "min": 1,
-            "max": 4,
-            "step": 1,
-            "start": 1,
-            "end": 4
-          }
-        }
-      ]
-    },
-    {
-      "property": {
-        "id": "greenspace",
-        "name": "Greenspace",
-        "type": "geojson",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedGreenspace.geojson",
-        "args": {
-          "color": "green",
-          "fillColor": "green"
-        },
-        "displayProperties": {
-            "missingDisplay": "No name found",
-            "displayPropertyArgs": [
-                {"id": "park_name", "displayName": "Park Name:"},
-                {"id": "name", "displayName": "Park Name:"},
-                {"id": "NAME", "displayName": "Park Name:"},
-                {"id": "park", "displayName": "Park Name:"}
-            ]
-        }
-      }
-    },
-    {
-      "property": {
-        "id": "heatProstration",
-        "name": "Heat Prostration",
-        "type": "geojson",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heat-prostration.geojson",
-        "ignoreOpacity": true,
-        "displayProperties": {
-            "displayPropertyArgs": [
-                {"id": "Casualty", "displayName": "Name:"},
-                {"id": "Year_", "displayName": "Year:"},
-                {"id": "Death", "displayName": "Death:"},
-                {"id": "Age", "displayName": "Age:"}
-            ]
-        }
-      }
-    },
-    {
-      "property": {
-        "id": "njtransitOneBusRoute",
-        "name": "NJ Transit #1 bus route",
-        "type": "geojson",
-        "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/njtransit-one-bus.geojson",
-        "ignoreOpacity": true
-      }
-    }
-  ],
-  "stories": [
-    {
-      "title": "Dr. Melissa Barber",
-      "content": "I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road1.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road2.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road3.jpeg\"></div>",
-      "mapState": {
-        "lat": 40.805985,
-        "lng": -73.925476,
-        "zoom": 16,
-        "layers": ["redline", "nycHiEvening", "njHiEvening"],
-        "controlPropertyValues": [
-          {
-            "layerId": "redline",
-            "opacity": 0.5,
-            "controlProperties": [
-              {
-                "controlPropertyId": "grade",
-                "value": [1, 1]
+        "controlProperties":[
+           {
+              "id":"nonWhitePercentage",
+              "title":"Non White (%)",
+              "type":"slider-range",
+              "tooltip":"The percentage of people who don't consider themselves white only",
+              "valueDisplayType":"percentage",
+              "hideNull":true,
+              "args":{
+                 "min":0,
+                 "max":1,
+                 "step":0.01,
+                 "start":0,
+                 "end":1
               }
-            ]
-          }
+           },
+           {
+              "id":"medianHouseholdIncome",
+              "title":"Median Household Income",
+              "type":"slider-range",
+              "tooltip":"Poorer neighborhoods and areas with more residents of color experience hotter temperatures in the summer and are more likely to work outside and live in denser housing with inadequate infrastructure. Additionally, people in areas more vulnerable to heat risks with lower income are less likely to have access to health care.",
+              "valueDisplayType":"currency",
+              "hideNull":true,
+              "args":{
+                 "min":0,
+                 "max":300000,
+                 "step":1000,
+                 "start":0,
+                 "end":300000
+              }
+           },
+           {
+              "id":"morningMaxHeatIndex",
+              "title":"Morning Max Heat Index",
+              "tooltip":"The maximum heat index recorded during the morning of the campaign in a given census block",
+              "type":"slider-range",
+              "args":{
+                 "min":60,
+                 "max":100,
+                 "step":1,
+                 "start":60,
+                 "end":100
+              }
+           },
+           {
+              "id":"afternoonMaxHeatIndex",
+              "title":"Afternoon Max Heat Index",
+              "tooltip":"The maximum heat index recorded during the afternoon of the campaign in a given census block",
+              "type":"slider-range",
+              "args":{
+                 "min":60,
+                 "max":100,
+                 "step":1,
+                 "start":60,
+                 "end":100
+              }
+           },
+           {
+              "id":"eveningMaxHeatIndex",
+              "title":"Evening Max Heat Index",
+              "tooltip":"The maximum heat index recorded during the evening of the campaign in a given census block",
+              "type":"slider-range",
+              "args":{
+                 "min":60,
+                 "max":100,
+                 "step":1,
+                 "start":60,
+                 "end":100
+              }
+           }
         ]
-      }
-    },
-    {
-      "title": "Anonymous",
-      "content": "I endured two hot summers in Washington Heights before installing an air conditioner. I was young and healthy, but it was still brutal. Cooking made the heat worse, and I worked at a bakery where no amount of air conditioning could keep up with the oven.",
-      "mapState": {
-        "lat": 40.844771,
-        "lng": -73.937088,
-        "zoom": 15,
-        "layers": ["nycHiAfternoon", "njHiAfternoon"]
-      }
-    },
-    {
-      "title": "The #1 Bus Chronicles",
-      "content": "Joel Katz writes, as a the director of the documentary film <a href=\"https://www.twn.org/catalog/pages/responsive/cpage.aspx?rec=1536&card=price\" target=\"_blank\">The #1 Bus Chronicles</a>, I spent countless hours at a bus stop at the intersection of Hackensack Ave. and Routes 1&9 in South Kearny, NJ. Weather conditions ranged from mid-blizzard to scorching heat. There's a bus shelter on only one side of the highway, and no water fountain anywhere nearby. During extreme heat it was absolutely withering<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road1.jpg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road2.png\"></div>",
-      "mapState": {
-        "lat": 40.728743,
-        "lng": -74.103840,
-        "zoom": 13,
-        "layers": ["njtransitOneBusRoute", "njNycHiMorning"]
-      }
-    },
-    {
-      "title": "Harlem and Heat",
-      "content": "Kemuning A. Adiputri's <a href=\"https://storymaps.arcgis.com/stories/4bda4f7fd7954640853f7ab76ef95403\" target=\"_blank\">story map</a> on heat prostration shows historic heat victims across the study area between 1880-1940, utilizing point addresses gained through historical newspapers in a randomized arrangement. This map aims to understand a pattern of reported heat victims (not to incorporate all victim data throughout history) to give a better understanding of what possible factors are behind those samplings.",
-      "mapState": {
-        "lat": 40.813573, 
-        "lng": -73.933917,
-        "zoom": 13,
-        "layers": ["heatProstration", "nycHiEvening", "njHiEvening"]
-      }
-    },
-    {
-      "title": "Life without shade trees",
-      "content": "Shade trees are typically overlooked for their ability to cool urban areas. Shade trees are mature street trees that are able to shade surfaces underneath as well as cool the air around them. When urban areas exist without trees, people must get creative to escape extreme heat. Here skateboarders use the shade of the NJ Turnpike Extension to shade themselves.<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/1.jpg\"></div>Here a man sites in the shade of a building <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/2_v2.jpg\"></div>Businesses on the side of the street with no shade get less foot traffic <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/3.jpg\"></div>",
-      "mapState": {
-        "lat": 40.731967, 
-        "lng": -74.046526,
-        "zoom": 14,
-        "layers": ["nycHiAfternoon", "njHiAfternoon"]
-      }
-    }
+     },
+     {
+        "property":{
+           "id":"redline",
+           "name":"Redlined Areas",
+           "type":"layer-with-filters",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedRedline.geojson",
+           "args":{
+              "colorFeatureProperty":"grade",
+              "minColor":"darkred",
+              "maxColor":"indianred"
+           },
+           "displayProperties":{
+              "displayPropertyArgs":[
+                 {
+                    "id":"holc_grade",
+                    "displayName":"Redline Grade:"
+                 }
+              ]
+           }
+        },
+        "controlProperties":[
+           {
+              "id":"grade",
+              "title":"Grade",
+              "type":"slider-range",
+              "tooltip":"The redline grade from worst D (represented as 1) to best A (represented as 4)",
+              "args":{
+                 "min":1,
+                 "max":4,
+                 "step":1,
+                 "start":1,
+                 "end":4
+              }
+           }
+        ]
+     },
+     {
+        "property":{
+           "id":"greenspace",
+           "name":"Greenspace",
+           "type":"geojson",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedGreenspace.geojson",
+           "args":{
+              "color":"green",
+              "fillColor":"green"
+           },
+           "displayProperties":{
+              "missingDisplay":"No name found",
+              "displayPropertyArgs":[
+                 {
+                    "id":"park_name",
+                    "displayName":"Park Name:"
+                 },
+                 {
+                    "id":"name",
+                    "displayName":"Park Name:"
+                 },
+                 {
+                    "id":"NAME",
+                    "displayName":"Park Name:"
+                 },
+                 {
+                    "id":"park",
+                    "displayName":"Park Name:"
+                 }
+              ]
+           }
+        }
+     },
+     {
+        "property":{
+           "id":"heatProstration",
+           "name":"Heat Prostration",
+           "type":"geojson",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heat-prostration.geojson",
+           "ignoreOpacity":true,
+           "displayProperties":{
+              "displayPropertyArgs":[
+                 {
+                    "id":"Casualty",
+                    "displayName":"Name:"
+                 },
+                 {
+                    "id":"Year_",
+                    "displayName":"Year:"
+                 },
+                 {
+                    "id":"Death",
+                    "displayName":"Death:"
+                 },
+                 {
+                    "id":"Age",
+                    "displayName":"Age:"
+                 }
+              ]
+           }
+        }
+     },
+     {
+        "property":{
+           "id":"njtransitOneBusRoute",
+           "name":"NJ Transit #1 bus route",
+           "type":"geojson",
+           "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/njtransit-one-bus.geojson",
+           "ignoreOpacity":true
+        }
+     }
+  ],
+  "stories":[
+     {
+        "title":"Dr. Melissa Barber",
+        "content":"I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road1.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road2.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road3.jpeg\"></div>",
+        "mapState":{
+           "lat":40.805985,
+           "lng":-73.925476,
+           "zoom":16,
+           "layers":[
+              "nycHiEvening",
+              "njHiEvening"
+           ]
+        }
+     },
+     {
+        "title":"Anonymous",
+        "content":"I endured two hot summers in Washington Heights before installing an air conditioner. I was young and healthy, but it was still brutal. Cooking made the heat worse, and I worked at a bakery where no amount of air conditioning could keep up with the oven.",
+        "mapState":{
+           "lat":40.844771,
+           "lng":-73.937088,
+           "zoom":15,
+           "layers":[
+              "nycHiAfternoon",
+              "njHiAfternoon"
+           ]
+        }
+     },
+     {
+        "title":"The #1 Bus Chronicles",
+        "content":"Joel Katz writes, as a the director of the documentary film <a href=\"https://www.twn.org/catalog/pages/responsive/cpage.aspx?rec=1536&card=price\" target=\"_blank\">The #1 Bus Chronicles</a>, I spent countless hours at a bus stop at the intersection of Hackensack Ave. and Routes 1&9 in South Kearny, NJ. Weather conditions ranged from mid-blizzard to scorching heat. There's a bus shelter on only one side of the highway, and no water fountain anywhere nearby. During extreme heat it was absolutely withering<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road1.jpg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road2.png\"></div>",
+        "mapState":{
+           "lat":40.728743,
+           "lng":-74.103840,
+           "zoom":13,
+           "layers":[
+              "njtransitOneBusRoute",
+              "njNycHiMorning"
+           ]
+        }
+     },
+     {
+        "title":"Harlem and Heat",
+        "content":"Kemuning A. Adiputri's <a href=\"https://storymaps.arcgis.com/stories/4bda4f7fd7954640853f7ab76ef95403\" target=\"_blank\">story map</a> on heat prostration shows historic heat victims across the study area between 1880-1940, utilizing point addresses gained through historical newspapers in a randomized arrangement. This map aims to understand a pattern of reported heat victims (not to incorporate all victim data throughout history) to give a better understanding of what possible factors are behind those samplings.",
+        "mapState":{
+           "lat":40.813573,
+           "lng":-73.933917,
+           "zoom":13,
+           "layers":[
+              "heatProstration",
+              "nycHiEvening",
+              "njHiEvening"
+           ]
+        }
+     },
+     {
+        "title":"Life without shade trees",
+        "content":"Shade trees are typically overlooked for their ability to cool urban areas. Shade trees are mature street trees that are able to shade surfaces underneath as well as cool the air around them. When urban areas exist without trees, people must get creative to escape extreme heat. Here skateboarders use the shade of the NJ Turnpike Extension to shade themselves.<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/1.jpg\"></div>Here a man sites in the shade of a building <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/2_v2.jpg\"></div>Businesses on the side of the street with no shade get less foot traffic <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/3.jpg\"></div>",
+        "mapState":{
+           "lat":40.731967,
+           "lng":-74.046526,
+           "zoom":14,
+           "layers":[
+              "nycHiAfternoon",
+              "njHiAfternoon"
+           ]
+        }
+     },
+     {
+        "title":"Redlining",
+        "content":"Research suggests that the historic, racist patterns of institutionalized discrimination and disinvestment - such as redlining - still manifest in the current landscape of vulnerability to heat across cities in the US. Redlining refers to the process by which Home Owners' Loan Corporation (HOLC) created 'residential security maps' delineating neighborhoods into different categories to indicate risk levels for giving out loans: A, most desirable (lighter red); B, slightly less desirable; C, declining neighborhoods; D, undesirable (darker red). The categories were assigned primarily based on the neighborhood's socio-demographic composition, and areas with high percentages of low-income immigrant or Black residents were marked as 'D', undesirable, colored in dark red. Redlining is associated with a wide range of present-day adverse outcomes, including disproportionate vulnerability to heat, adverse health outcomes, higher asthma rates, birth outcomes, and cancer diagnoses, among others. For more information, see <a href=\"https://login.library.utoronto.ca/index.php?url=https://link.springer.com/article/10.1007/s11524-021-00602-6\" target=\"_blank\">Schinasi et al., 2022</a>; <a href=\"https://www.tandfonline.com/doi/full/10.1080/01944363.2020.1759127\" target=\"_blank\">Wilson, 2020.</a> For information specific to Northern Manhattan, see <a href=\"https://www.weact.org/2020/08/public-green-spaces-racism-heat-and-barriers-to-access/\" target=\"_blank\">Urofsky & Parks, 2020</a> at WEACT for Environmental Justice.",
+        "mapState":{
+           "lat":40.763862,
+           "lng":-73.95,
+           "zoom":12,
+           "layers":[
+              "redline"
+           ],
+           "controlPropertyValues":[
+              {
+                 "layerId":"redline",
+                 "opacity":0.5,
+                 "controlProperties":[
+                    {
+                       "controlPropertyId":"grade",
+                       "value":[
+                          1,
+                          4
+                       ]
+                    }
+                 ]
+              }
+           ]
+        }
+     },
+     {
+        "title":"Greenspace",
+        "content":"Parks and green spaces can be cornerstones of communities both physically and culturally while simultaneously providing health benefits. But of course, these spaces aren’t equally accessible to all – communities marginalized along race and class lines face many barriers to accessing public green spaces. These barriers, created largely by systemic racism, have a long history in New York City (NYC) and reveal a clear pattern of environmental injustice. The South Bronx is one of the communities that has little to no public access to green and blue space. And even if there are spaces, nearby industry and waste transfer facilities affect air quality, which is another obstacle to benefitting from green space.",
+        "mapState":{
+           "lat":40.763862,
+           "lng":-73.95,
+           "zoom":11,
+           "layers":[
+              "greenspace"
+           ]
+        }
+     }
   ]
 }
