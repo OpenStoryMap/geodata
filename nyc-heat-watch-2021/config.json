@@ -288,9 +288,30 @@
             "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/njtransit-one-bus.geojson",
             "ignoreOpacity":true
          }
+      },
+      {
+         "property":{
+            "id":"bruckner",
+            "name":"Bruckner Boulevard",
+            "type":"geojson",
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/bruckner.geojson",
+            "ignoreOpacity":true,
+            "displayProperties":{
+               "displayPropertyArgs":[
+                  {
+                     "id":"name",
+                     "displayName":"Intersection"
+                  }
+               ]
+            }
+         }
       }
    ],
    "stories":[
+      {
+         "title":"Add Your Own Story!",
+         "content":"Do you live witin the study area (Northern Manhattan, South Bronx, Jersey City, Newark, and Elizabeth) and would like to tell your story about extreme heat here? <a href=\"https://tinyurl.com/nynjheat\" target=\"_blank\">Please submit your story here.</a>"
+      },
       {
          "title":"Dr. Melissa Barber",
          "content":"I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road1.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road2.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road3.jpeg\"></div>",
@@ -300,7 +321,8 @@
             "zoom":16,
             "layers":[
                "nycHiEvening",
-               "njHiEvening"
+               "njHiEvening",
+               "bruckner"
             ]
          }
       },
