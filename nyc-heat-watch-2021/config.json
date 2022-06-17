@@ -1,5 +1,5 @@
 {
-   "mapboxAccessToken":"",
+  "mapboxAccessToken": "",
    "initialMapState":{
       "lat":40.763862,
       "lng":-73.95,
@@ -14,39 +14,23 @@
             "id":"njNycHiMorning",
             "name":"NJ / NYC Morning Heat Index",
             "type":"raster",
-            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-nyc-hi-morning-percent-cleaned-compressed.tif"
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-nyc-hi-morning.tiff"
          }
       },
       {
          "property":{
-            "id":"nycHiAfternoon",
-            "name":"NYC Afternoon Heat Index",
+            "id":"njNycHiAfternoon",
+            "name":"NJ / NYC Afternoon Heat Index",
             "type":"raster",
-            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-afternoon.tiff"
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-nyc-hi-afternoon.tiff"
          }
       },
       {
          "property":{
-            "id":"njHiAfternoon",
-            "name":"NJ Afternoon Heat Index",
+            "id":"njNycHiEvening",
+            "name":"NJ / NYC Evening Heat Index",
             "type":"raster",
-            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-afternoon.tiff"
-         }
-      },
-      {
-         "property":{
-            "id":"nycHiEvening",
-            "name":"NYC Evening Heat Index",
-            "type":"raster",
-            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nyc-hi-evening.tiff"
-         }
-      },
-      {
-         "property":{
-            "id":"njHiEvening",
-            "name":"NJ Evening Heat Index",
-            "type":"raster",
-            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-hi-evening.tiff"
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/nj-nyc-hi-evening.tiff"
          }
       },
       {
@@ -174,7 +158,8 @@
             "args":{
                "colorFeatureProperty":"grade",
                "minColor":"darkred",
-               "maxColor":"indianred"
+               "maxColor":"indianred",
+               "opacity": 0.7
             },
             "displayProperties":{
                "displayPropertyArgs":[
@@ -201,15 +186,28 @@
             }
          ]
       },
+      {    
+        "property": {    
+          "id": "greenspaceNdvi",    
+          "name": "Greenspace NDVI",    
+          "type": "raster",    
+          "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/greenspacesNdvi.tiff",
+          "args": {    
+              "colorStart": "black",    
+              "colorStop": "lightgreen",    
+              "resolution": 256    
+          }    
+        }    
+      },
       {
          "property":{
             "id":"greenspace",
-            "name":"Greenspace",
-            "type":"geojson",
-            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/overlappedGreenspace.geojson",
+            "name": "Greenspace",
+            "type": "layer-with-filters",
+            "url": "https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/greenspacesNdvi.geojson",
             "args":{
                "color":"green",
-               "fillColor":"green"
+               "fillOpacity": 0
             },
             "displayProperties":{
                "missingDisplay":"No name found",
@@ -320,8 +318,7 @@
             "lng":-73.925476,
             "zoom":16,
             "layers":[
-               "nycHiEvening",
-               "njHiEvening",
+               "njNycHiEvening",
                "bruckner"
             ]
          }
@@ -333,10 +330,7 @@
             "lat":40.844771,
             "lng":-73.937088,
             "zoom":15,
-            "layers":[
-               "nycHiAfternoon",
-               "njHiAfternoon"
-            ]
+            "layers":[ "njNycHiAfternoon" ]
          }
       },
       {
@@ -361,8 +355,7 @@
             "zoom":13,
             "layers":[
                "heatProstration",
-               "nycHiEvening",
-               "njHiEvening"
+               "njNycHiEvening"
             ]
          }
       },
@@ -373,10 +366,7 @@
             "lat":40.731967,
             "lng":-74.046526,
             "zoom":14,
-            "layers":[
-               "nycHiAfternoon",
-               "njHiAfternoon"
-            ]
+            "layers":[ "njNycHiAfternoon" ]
          }
       },
       {
@@ -415,7 +405,8 @@
             "zoom":16,
             "layers":[
                "bronx-grayspace",
-               "greenspace"
+               "greenspace",
+               "greenspaceNdvi"
             ]
          }
       }
