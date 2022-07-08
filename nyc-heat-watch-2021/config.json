@@ -1,8 +1,8 @@
 {
-   "mapboxAccessToken": "",
+   "mapboxAccessToken": "pk.eyJ1IjoiamFzb25iaWVnZWwiLCJhIjoiY2w1YWZ4MmYxMDdnaDNpdGRpcjZ1ZmpiNSJ9.wJ3_1w2QmbDGUVNOUbGz-w",
     "initialMapState":{
        "lat":40.763862,
-       "lng":-73.95,
+       "lng":-74.05,
        "zoom":12,
        "layers":[
           "njNycHiAfternoon"
@@ -308,11 +308,11 @@
     "stories":[
        {
           "title":"Getting Started",
-          "content":"<p>This story map can be used to visualize the results of NYC's 2021 urban heat island mapping campaign combined with stories about peoples experience with extreme heat and relevant historical and demographic information. Click through the stories to be guided through data visualizations. You can also make your own visualization with the layers and controls provided.</p><p>Do you live within the study area (Northern Manhattan, South Bronx, Jersey City, Newark, and Elizabeth) and would like to tell your story about extreme heat here? <a href=\"https://tinyurl.com/nynjheat\" target=\"_blank\">Please submit your story here.</a></p>"
+          "content":"<p>This story map can be used to visualize the results of NYC's 2021 urban heat island mapping campaign combined with stories about peoples experience with extreme heat and relevant historical and demographic information. Click through the stories to be guided through data visualizations. You can also make your own visualization with the layers and controls provided.</p><p>Do you live within the study area (Northern Manhattan, South Bronx, Jersey City, Newark, and Elizabeth) and would like to tell your story about extreme heat here? <a href=\"submit.html\">Please submit your story here.</a></p>"
        },
        {
-          "title":"Dr. Melissa Barber",
-          "content":"I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road1.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road2.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road3.jpeg\"></div>",
+          "title":"Heat + traffic + pollution + odors",
+          "content":"From Dr. Melissa Barber: I live on Bruckner Boulevard, between Alexander and Willis Avenues, directly adjacent to the Willis Avenue Bridge. Heat during the summer months is completely exhausting because it not only brings the smell of hot trash from the waste transfer station, exacerbates the smog of the heavy highway traffic that usually starts about 5 am and reminds me of the ensuing high electric bill from the use of fans and air conditioners, there is very little tree coverage or shade to block the sun's rays or cool even the outside temperatures. From the moment Lilah and I leave the building, heat hits us and follows us throughout the entire neighborhood<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road1.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road2.jpeg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/melissa-barber/road3.jpeg\"></div>",
           "mapState":{
              "lat":40.805985,
              "lng":-73.925476,
@@ -324,7 +324,7 @@
           }
        },
        {
-          "title":"Anonymous in Washington Heights",
+          "title":"Brutal even for the young and healthy",
           "content":"I endured two hot summers in Washington Heights before installing an air conditioner. I was young and healthy, but it was still brutal. Cooking made the heat worse, and I worked at a bakery where no amount of air conditioning could keep up with the oven.",
           "mapState":{
              "lat":40.844771,
@@ -335,7 +335,7 @@
        },
        {
           "title":"The #1 Bus Chronicles",
-          "content":"Joel Katz writes, as a the director of the documentary film <a href=\"https://www.twn.org/catalog/pages/responsive/cpage.aspx?rec=1536&card=price\" target=\"_blank\">The #1 Bus Chronicles</a>, I spent countless hours at a bus stop at the intersection of Hackensack Ave. and Routes 1&9 in South Kearny, NJ. Weather conditions ranged from mid-blizzard to scorching heat. There's a bus shelter on only one side of the highway, and no water fountain anywhere nearby. During extreme heat it was absolutely withering<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road1.jpg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road2.png\"></div>",
+          "content":"From Joel Katz: as a the director of the documentary film <a href=\"https://www.twn.org/catalog/pages/responsive/cpage.aspx?rec=1536&card=price\" target=\"_blank\">The #1 Bus Chronicles</a>, I spent countless hours at a bus stop at the intersection of Hackensack Ave. and Routes 1&9 in South Kearny, NJ. Weather conditions ranged from mid-blizzard to scorching heat. There's a bus shelter on only one side of the highway, and no water fountain anywhere nearby. During extreme heat it was absolutely withering<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road1.jpg\"></div><div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/one-bus/road2.png\"></div>",
           "mapState":{
              "lat":40.728743,
              "lng":-74.103840,
@@ -361,39 +361,12 @@
        },
        {
           "title":"Life without shade trees",
-          "content":"Shade trees are typically overlooked for their ability to cool urban areas. Shade trees are mature street trees that are able to shade surfaces underneath as well as cool the air around them. When urban areas exist without trees, people must get creative to escape extreme heat. Here skateboarders use the shade of the NJ Turnpike Extension to shade themselves.<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/1.jpg\"></div>Here a man sites in the shade of a building <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/2_v2.jpg\"></div>Businesses on the side of the street with no shade get less foot traffic <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/3.jpg\"></div>",
+          "content":"Shade trees are typically overlooked for their ability to cool urban areas. Shade trees are mature street trees that are able to shade surfaces underneath as well as cool the air around them. When urban areas exist without trees, people must get creative to escape extreme heat. Here skateboarders use the shade of the NJ Turnpike Extension to shade themselves.<div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/1.jpg\"></div>Here a man sits in the shade of a building <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/2_v2.jpg\"></div>Businesses on the side of the street with no shade get less foot traffic <div><img src=\"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/stories/no-shade-trees/3.jpg\"></div>",
           "mapState":{
              "lat":40.731967,
              "lng":-74.046526,
              "zoom":14,
              "layers":[ "njNycHiAfternoon" ]
-          }
-       },
-       {
-          "title":"Redlining",
-          "content":"Research suggests that the historic, racist patterns of institutionalized discrimination and disinvestment - such as redlining - still manifest in the current landscape of vulnerability to heat across cities in the US. Redlining refers to the process by which Home Owners' Loan Corporation (HOLC) created 'residential security maps' delineating neighborhoods into different categories to indicate risk levels for giving out loans: A, most desirable (lighter red); B, slightly less desirable; C, declining neighborhoods; D, undesirable (darker red). The categories were assigned primarily based on the neighborhood's socio-demographic composition, and areas with high percentages of low-income immigrant or Black residents were marked as 'D', undesirable, colored in dark red. Redlining is associated with a wide range of present-day adverse outcomes, including disproportionate vulnerability to heat, adverse health outcomes, higher asthma rates, birth outcomes, and cancer diagnoses, among others. For more information, see <a href=\"https://login.library.utoronto.ca/index.php?url=https://link.springer.com/article/10.1007/s11524-021-00602-6\" target=\"_blank\">Schinasi et al., 2022</a>; <a href=\"https://www.tandfonline.com/doi/full/10.1080/01944363.2020.1759127\" target=\"_blank\">Wilson, 2020.</a> For information specific to Northern Manhattan, see <a href=\"https://www.weact.org/2020/08/public-green-spaces-racism-heat-and-barriers-to-access/\" target=\"_blank\">Urofsky & Parks, 2020</a> at WEACT for Environmental Justice.",
-          "mapState":{
-             "lat":40.763862,
-             "lng":-73.95,
-             "zoom":12,
-             "layers":[
-                "redline"
-             ],
-             "controlPropertyValues":[
-                {
-                   "layerId":"redline",
-                   "opacity":0.5,
-                   "controlProperties":[
-                      {
-                         "controlPropertyId":"grade",
-                         "value":[
-                            1,
-                            4
-                         ]
-                      }
-                   ]
-                }
-             ]
           }
        },
        {
