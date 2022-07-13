@@ -82,7 +82,7 @@
                 "id":"nonWhitePercentage",
                 "title":"Non White (%)",
                 "type":"slider-range",
-                "tooltip":"The percentage of people who don't consider themselves white only",
+                "tooltip":"The percentage of people who don't consider themselves white only. For example, the bar positioned at 0.5 shows you areas in which the area's population is 50% non-white. Hence, the higher the percentage, the higher number of people of color in that area.",
                 "valueDisplayType":"percentage",
                 "hideNull":true,
                 "args":{
@@ -308,7 +308,7 @@
     "stories":[
        {
           "title":"Getting Started",
-          "content":"<p>This story map can be used to visualize the results of NYC's 2021 urban heat island mapping campaign combined with stories about peoples experience with extreme heat and relevant historical and demographic information. Click through the stories to be guided through data visualizations. You can also make your own visualization with the layers and controls provided.</p><p>Do you live within the study area (Northern Manhattan, South Bronx, Jersey City, Newark, and Elizabeth) and would like to tell your story about extreme heat here? <a href=\"submit.html\">Please submit your story here.</a></p>"
+          "content":"<span style=\"text-align: center;\">This story map can be used to visualize the results of NYC and northeastern NJ's 2021 urban heat island mapping campaign combined with personal experience stories about extreme heat, as well as historical and demographic information that <strong><a href=\"unequal.html\">show how heat connects to social inequities and health disparities</a></strong>.</span><p style=\"text-align: center;\">To see different data visualizations, first select layers (see top right on the map) and then adjust your options from the 'CONTROLS' panel.</p><p style=\"text-align: center;\">Do you live within the study area (Northern Manhattan, South Bronx, Jersey City, Newark, and Elizabeth) and would like to tell your story about extreme heat here?<br><a href=\"submit.html\" target=\"_blank\">Please submit your story here for a chance to win a $50 gift card.</a></p>"
        },
        {
           "title":"Heat + traffic + pollution + odors",
@@ -347,7 +347,7 @@
           }
        },
        {
-          "title":"Harlem and Heat",
+          "title":"Heat Deaths in Harlem, 1880-1940",
           "content":"Kemuning A. Adiputri's <a href=\"https://storymaps.arcgis.com/stories/4bda4f7fd7954640853f7ab76ef95403\" target=\"_blank\">story map</a> on heat prostration shows historic heat victims across the study area between 1880-1940, utilizing point addresses gained through historical newspapers in a randomized arrangement. This map aims to understand a pattern of reported heat victims (not to incorporate all victim data throughout history) to give a better understanding of what possible factors are behind those samplings.",
           "mapState":{
              "lat":40.813573,
