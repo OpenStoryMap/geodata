@@ -317,7 +317,7 @@
                 "fillOpacity": 0.7
              },
              "displayProperties":{
-                "missingDisplay":"No data found",
+                "missingDisplay":"N/A",
                 "displayPropertyArgs":[
                    {
                       "id":"Fine Particulate Matter (PM2.5) - 90th Percentile",
@@ -369,7 +369,7 @@
 
             },
             "displayProperties":{
-            "missingDisplay":"No data found",
+                "missingDisplay":"N/A",
             "displayPropertyArgs":[
                 {
                     "id":"5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Age-Adjusted  Rate",
@@ -430,7 +430,7 @@
                 "fillOpacity": 0.7
             },
             "displayProperties":{
-            "missingDisplay":"No data found",
+            "missingDisplay":"N/A",
             "displayPropertyArgs":[
                 {
                     "id":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - 18 Yrs and Older",
@@ -512,7 +512,7 @@
 
             },
             "displayProperties":{
-            "missingDisplay":"No data found",
+            "missingDisplay":"N/A",
             "displayPropertyArgs":[
                 {
                     "id":"Poverty - Number",
