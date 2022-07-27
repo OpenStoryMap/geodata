@@ -303,7 +303,258 @@
                 ]
              }
           }
-       }
+       },
+       {
+          "property": {
+             "id":"air_quality",
+             "name": "Air Quality",
+             "type": "layer-with-filters",
+             "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/air-quality.geojson",
+             "args":{
+                "minColor":"darkgrey",
+                "maxColor":"white",
+                "color": "darkgrey",
+                "fillOpacity": 0.7
+             },
+             "displayProperties":{
+                "missingDisplay":"No data found",
+                "displayPropertyArgs":[
+                   {
+                      "id":"Fine Particulate Matter (PM2.5) - 90th Percentile",
+                      "displayName":"Fine Particulate Matter (PM2.5) - 90th Percentile"
+                   },
+                   {
+                      "id":"Fine Particulate Matter (PM2.5) - Mean",
+                      "displayName":"Fine Particulate Matter (PM2.5) - Mean"
+                   },
+                   {
+                      "id":"Black Carbon - 90th Percentile",
+                      "displayName":"Black Carbon - 90th Percentile"
+                   },
+                   {
+                      "id":"Black Carbon - Mean",
+                      "displayName":"Black Carbon - Mean"
+                   }
+                ]
+             }
+          },
+          "controlProperties": [
+              {
+                "id":"fill-color",
+                "title":"Air Quality Fill Color",
+                "subtitle": "Pick variable for background gradient color",
+                "type":"fill-color",
+                "args":{
+                    "include": [
+                      "Fine Particulate Matter (PM2.5) - 90th Percentile",
+                      "Fine Particulate Matter (PM2.5) - Mean",
+                      "Black Carbon - 90th Percentile",
+                      "Black Carbon - Mean"
+                    ],
+                    "initialValue": "Fine Particulate Matter (PM2.5) - 90th Percentile"
+                }
+        }]
+      },
+      {
+        "property": {
+            "id":"heat_stress",
+            "name": "Heat Stress",
+            "type": "layer-with-filters",
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/heat-stress.geojson",
+            "args":{
+                "minColor":"grey",
+                "maxColor":"red",
+                "color": "darkgrey",
+                "fillOpacity": 0.7
+
+            },
+            "displayProperties":{
+            "missingDisplay":"No data found",
+            "displayPropertyArgs":[
+                {
+                    "id":"5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Age-Adjusted  Rate",
+                    "displayName":"5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Age-Adjusted  Rate"
+                },
+                {
+                    "id":"5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Rate",
+                    "displayName":"5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Rate"
+                },
+                {
+                    "id":"5-Year Heat Stress Hospitalizations - 5-Year Total Number",
+                    "displayName":"5-Year Heat Stress Hospitalizations - 5-Year Total Number"
+                },
+                {
+                    "id":"Heat Stress Emergency Department Visits - Age-Adjusted Rate",
+                    "displayName":"Heat Stress Emergency Department Visits - Age-Adjusted Rate"
+                },
+                {
+                    "id":"Heat Stress Emergency Department Visits - Estimated Annual Rate",
+                    "displayName":"Heat Stress Emergency Department Visits - Estimated Annual Rate"
+                },
+                {
+                    "id":"Heat Stress Hospitalizations - Estimated Annual Rate",
+                    "displayName":"Heat Stress Hospitalizations - Estimated Annual Rate"
+                }
+            ]
+            }
+        },
+        "controlProperties": [
+            {
+            "id":"fill-color",
+            "title":"Heat Stress Fill Color",
+            "subtitle": "Pick variable for background gradient color",
+            "type":"fill-color",
+            "args":{
+                "include": [
+                    "5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Age-Adjusted  Rate",
+                    "5-Year Heat Stress Hospitalizations - 5-Year Avg. Annual Rate",
+                    "5-Year Heat Stress Hospitalizations - 5-Year Total Number",
+                    "Heat Stress Emergency Department Visits - Age-Adjusted Rate",
+                    "Heat Stress Emergency Department Visits - Estimated Annual Rate",
+                    "Heat Stress Hospitalizations - Estimated Annual Rate"
+                ],
+                "initialValue": "Heat Stress Hospitalizations - Estimated Annual Rate"
+            }
+        }]
+    },
+    {
+        "property": {
+            "id":"health_impacts_of_air_pollution",
+            "name": "Health Impacts Of Air Pollution",
+            "type": "layer-with-filters",
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/health-impacts-of-air-pollution.geojson",
+            "args":{
+                "minColor":"green",
+                "maxColor":"yellow",
+                "color": "darkgrey",
+                "fillOpacity": 0.7
+            },
+            "displayProperties":{
+            "missingDisplay":"No data found",
+            "displayPropertyArgs":[
+                {
+                    "id":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - 18 Yrs and Older",
+                    "displayName":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - 18 Yrs and Older"
+                },
+                {
+                    "id":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - Children 0 to 17 Yrs Old",
+                    "displayName":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - Children 0 to 17 Yrs Old"
+                },
+                {
+                    "id":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Rate- 18 Yrs and Older",
+                    "displayName":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Rate- 18 Yrs and Older"
+                },
+                {
+                    "id":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Rate- Children 0 to 17 Yrs Old",
+                    "displayName":"PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Rate- Children 0 to 17 Yrs Old"
+                },
+                {
+                    "id":"PM2.5-Attributable Cardiovascular Hospitalizations (Adults 40 Yrs and Older) - Estimated Annual Number",
+                    "displayName":"PM2.5-Attributable Cardiovascular Hospitalizations (Adults 40 Yrs and Older) - Estimated Annual Number"
+                },
+                {
+                    "id":"PM2.5-Attributable Cardiovascular Hospitalizations (Adults 40 Yrs and Older) - Estimated Annual Rate",
+                    "displayName":"PM2.5-Attributable Cardiovascular Hospitalizations (Adults 40 Yrs and Older) - Estimated Annual Rate"
+                },
+                {
+                    "id":"PM2.5-Attributable Deaths - Estimated Annual Number - Adults 30 Yrs and Older",
+                    "displayName":"PM2.5-Attributable Deaths - Estimated Annual Number - Adults 30 Yrs and Older"
+                },
+                {
+                    "id":"PM2.5-Attributable Deaths - Estimated Annual Rate - Adults 30 Yrs and Older",
+                    "displayName":"PM2.5-Attributable Deaths - Estimated Annual Rate - Adults 30 Yrs and Older"
+                },
+                {
+                    "id":"PM2.5-Attributable Respiratory Hospitalizations (Adults 20 Yrs and Older) - Estimated Annual Number",
+                    "displayName":"PM2.5-Attributable Respiratory Hospitalizations (Adults 20 Yrs and Older) - Estimated Annual Number"
+                },
+                {
+                    "id":"PM2.5-Attributable Respiratory Hospitalizations (Adults 20 Yrs and Older) - Estimated Annual Rate",
+                    "displayName":"PM2.5-Attributable Respiratory Hospitalizations (Adults 20 Yrs and Older) - Estimated Annual Rate"
+                }
+            ]
+            }
+        },
+        "controlProperties": [
+            {
+            "id":"fill-color",
+            "title":"Health Impacts Of Air Pollution Fill Color",
+            "subtitle": "Pick variable for background gradient color",
+            "type":"fill-color",
+            "args":{
+                "include": [
+                    "PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - 18 Yrs and Older",
+                    "PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - Children 0 to 17 Yrs Old",
+                    "PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Rate- 18 Yrs and Older",
+                    "PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Rate- Children 0 to 17 Yrs Old",
+                    "PM2.5-Attributable Cardiovascular Hospitalizations (Adults 40 Yrs and Older) - Estimated Annual Number",
+                    "PM2.5-Attributable Cardiovascular Hospitalizations (Adults 40 Yrs and Older) - Estimated Annual Rate",
+                    "PM2.5-Attributable Deaths - Estimated Annual Number - Adults 30 Yrs and Older",
+                    "PM2.5-Attributable Deaths - Estimated Annual Rate - Adults 30 Yrs and Older",
+                    "PM2.5-Attributable Respiratory Hospitalizations (Adults 20 Yrs and Older) - Estimated Annual Number",
+                    "PM2.5-Attributable Respiratory Hospitalizations (Adults 20 Yrs and Older) - Estimated Annual Rate"
+                ],
+                "initialValue": "PM2.5-Attributable Asthma Emergency Department Visits - Estimated Annual Number - 18 Yrs and Older"
+            }
+        }]
+    },
+    {
+        "property": {
+            "id":"social_economic",
+            "name": "Social and Economic",
+            "type": "layer-with-filters",
+            "url":"https://raw.githubusercontent.com/OpenStoryMap/geodata/main/nyc-heat-watch-2021/social-economic.geojson",
+            "args":{
+                "minColor":"black",
+                "maxColor":"green",
+                "color": "darkgrey",
+                "fillOpacity": 0.7
+
+            },
+            "displayProperties":{
+            "missingDisplay":"No data found",
+            "displayPropertyArgs":[
+                {
+                    "id":"Poverty - Number",
+                    "displayName":"Poverty - Number"
+                },
+                {
+                    "id":"Older Adults Living Alone - Number",
+                    "displayName":"Older Adults Living Alone - Number"
+                },
+                {
+                    "id":"Older Adults Living Alone - Percent",
+                    "displayName":"Older Adults Living Alone - Percent"
+                },
+                {
+                    "id":"Unemployment - Number",
+                    "displayName":"Unemployment - Number"
+                },
+                {
+                    "id":"Unemployment - Percent",
+                    "displayName":"Unemployment - Percent"
+                }
+            ]
+            }
+        },
+        "controlProperties": [
+            {
+            "id":"fill-color",
+            "title":"Social and Economic Fill Color",
+            "subtitle": "Pick variable for background gradient color",
+            "type":"fill-color",
+            "args":{
+                "include": [
+                    "Poverty - Number",
+                    "Older Adults Living Alone - Number",
+                    "Older Adults Living Alone - Percent",
+                    "Unemployment - Number",
+                    "Unemployment - Percent"
+                ],
+                "initialValue": "Poverty - Number"
+            }
+        }]
+    }
     ],
     "stories":[
        {
