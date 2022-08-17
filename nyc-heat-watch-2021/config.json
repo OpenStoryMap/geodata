@@ -643,6 +643,16 @@
             "zoom":14,
             "layers":[ "njNycHiAfternoon" ]
          }
+      },
+      {
+        "title":"Open Hydrants Have Repercussions",
+        "content":"Mid-80s open hydrants meant top floor apt. dwellers lost water pressure. My neighbors had to walk down 5 flights and carry buckets back upstairs.<br><br>*Additions from the storymap team:<br>Are you struggling from similar issues with fire hydrants in your area? You can get a spray cap from your local fire station and access an outreach program that can teach you how to use it - <a href=\"https://www1.nyc.gov/html/dep/html/press_releases/14-062pr.shtml#.Yvw7t3bMK73\" target=\"_blank\">more info here</a>. For a long-standing issue, you can file a complaint <a href=\"https://portal.311.nyc.gov/article/?kanumber=KA-01034\" target=\"_blank\">here</a>.<br>In case of interest: <a href=\"https://www.atlasobscura.com/articles/new-yorkers-have-been-illicitly-cracking-open-fire-hydrants-for-centuries\" target=\"_blank\">A historical dive into fire hydrant cracking in NYC</a>.",
+        "mapState":{
+           "lat": 40.8082044,
+           "lng": -73.9232586,
+           "zoom": 15,
+           "layers":[ "njNycHiAfternoon", "greenspace", "heat_stress" ]
+        }
       }
     ]
   }
